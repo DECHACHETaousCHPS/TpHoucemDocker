@@ -6,15 +6,16 @@ node {
 
  }
 
-  stage('Build') {
+  stage('Build image') {
 
-      sh ' mvn -Dmaven.test.failure.ignore=true install '
+        sh 'sudo docker build -t tomcat:jar . '
 
- }
-  stage('test') {
-     sh ' mvn -Dmaven.test.failure.ignore test'
-  
   }
+  stage('Run Image') {
+
+      sh 'sudo docker run -d --name jarctr -p 8989:8080 tomcat:jar'
+  }
+
 
 }
 
