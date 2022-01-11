@@ -8,7 +8,7 @@ node {
 
   stage('Build') {
 
-      sh 'mvn clean install package'
+      sh ' mvn -Dmaven.test.failure.ignore=true install '
 
  }
 
