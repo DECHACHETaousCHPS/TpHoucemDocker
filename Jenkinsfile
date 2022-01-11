@@ -8,19 +8,22 @@ node {
 
   stage('Build image') {
 
-        sh 'sudo docker build -t myapplicationjar  . '
-        sh 'sudo docker tag myapplicationjar taousdechache/myapplicationjar:v1 '
+        sh 'sudo docker build -t myapjar  . '
+        
 
   }
-  stage('Push Image to docker hub') {
 
-      sh 'sudo docker push taousdechache/myapplicationjar:v1 '
-  }
 
   stage('Run Image') {
 
-      sh 'sudo docker run -d taousdechache/myapplicationjar:v1 '
+      sh 'sudo docker run -d  --name myapjar myapjar'
   }
+  
+ 
+
+  
+
+
 
   stage('Ansible') {
 

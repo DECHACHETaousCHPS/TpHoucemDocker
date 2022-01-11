@@ -28,8 +28,7 @@
      
     - name: deploy tomcat  docker container
       docker_container:
-        image: myapplijarr
-        name:  myapplictrr
+        image: myapplicationjar        
         state: started
         auto_remove: true
         ports:
