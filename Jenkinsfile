@@ -8,7 +8,7 @@ node {
 
   stage('Build') {
 
-      sh 'sudo mvn clean install package'
+      sh 'mvn clean install package'
 
  }
 
