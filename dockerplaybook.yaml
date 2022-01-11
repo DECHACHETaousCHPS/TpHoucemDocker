@@ -28,8 +28,8 @@
      
     - name: deploy tomcat  docker container
       docker_container:
-        image: tomcat:jar
-        name: jartomcat
+        image: tomcat:jarr
+        name: jarcontr
         state: started
         auto_remove: true
         ports:
