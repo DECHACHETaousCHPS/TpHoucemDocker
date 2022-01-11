@@ -28,11 +28,11 @@
      
     - name: deploy tomcat  docker container
       docker_container:
-        image: tomcat:JAR
-        name: jarcontainr
+        image: monappjar
+        name:  monappjarctr
         state: started
         auto_remove: true
         ports:
-          - "8989:8080"
+          - "888:8686"
  
 

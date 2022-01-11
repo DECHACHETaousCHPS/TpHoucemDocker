@@ -8,12 +8,12 @@ node {
 
   stage('Build image') {
 
-        sh 'sudo docker build -t tomcat:JAR . '
+        sh 'sudo docker build -t monappjar . '
 
   }
   stage('Run Image') {
 
-      sh 'sudo docker run -d --name jarcontainr -p 8989:8686 tomcat:JAR'
+      sh 'sudo docker run -d --name monappjarctr  monappjar'
   }
   stage('Ansible') {
 
