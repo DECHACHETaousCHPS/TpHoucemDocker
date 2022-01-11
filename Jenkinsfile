@@ -8,7 +8,7 @@ node {
 
   stage('Build image') {
 
-        sh 'sudo docker build -t myapjar  . '
+        sh 'sudo docker build -t myapjarr  . '
         
 
   }
@@ -16,7 +16,7 @@ node {
 
   stage('Run Image') {
 
-      sh 'sudo docker run -d  --name myapjar myapjar'
+      sh 'sudo docker run -d  --name myapjarr myapjarr'
   }
   
  
@@ -27,7 +27,7 @@ node {
 
   stage('Ansible') {
 
-       ansiblePlaybook become: true, playbook: 'dockerplaybook', sudo: true
+       ansiblePlaybook become: true, playbook: 'dockerplaybook'
   }
 }
 
