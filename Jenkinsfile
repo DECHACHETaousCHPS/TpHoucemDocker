@@ -11,7 +11,7 @@ node {
       sh ' mvn -Dmaven.test.failure.ignore=true install '
 
  }
-  stage('Build') {
+  stage('test') {
      sh ' mvn -Dmaven.test.failure.ignore test'
   
   }
