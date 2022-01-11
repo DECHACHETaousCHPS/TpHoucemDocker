@@ -8,14 +8,14 @@ node {
 
   stage('Build image') {
 
-        sh 'sudo docker build -t myapplicationjarr  . '
-        sh 'sudo docker tag myapplicationjarr taousdechache/myapplicationjarr:latest '
+        sh 'sudo docker build -t myapplication  . '
+        sh 'sudo docker tag myapplication taousdechache/myapplicationjarr:latest '
 
   }
 
   stage('Run Image') {
 
-      sh 'sudo docker run -d -p 666:8686  taousdechache/myapplicationjarr:latest '
+      sh 'sudo docker run -d -p 8888:8080  taousdechache/myapplicationjarr:latest '
   }
 
    stage('Login dockerhub') {
