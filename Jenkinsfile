@@ -9,13 +9,13 @@ node {
   stage('Build image') {
 
         sh 'sudo docker build -t myapplicationjar  . '
-        sh 'sudo docker tag myapplicationjar taousdechache/myapplicationjar:latest '
+        sh 'sudo docker tag myapplicationjarr taousdechache/myapplicationjarr:latest '
 
   }
 
   stage('Run Image') {
 
-      sh 'sudo docker run -d -p 666:8686  taousdechache/myapplicationjar:latest '
+      sh 'sudo docker run -d -p 666:8686  taousdechache/myapplicationjarr:latest '
   }
 
    stage('Login dockerhub') {
@@ -28,7 +28,7 @@ node {
  
    stage('Push Image to docker hub') {
 
-      sh 'sudo docker push taousdechache/myapplicationjar:latest '
+      sh 'sudo docker push taousdechache/myapplicationjarr:latest '
   }
 
   

@@ -26,11 +26,11 @@
         state: started
         enabled: yes
     - name: récuper l'image de docker hube
-      shell: sudo docker pull taousdechache/myapplicationjar:v1 
+      shell: sudo docker pull taousdechache/myapplicationjarr:latest
 
     - name: deploy tomcat  docker container
       docker_container:
-        image: myapplicationjar:v1
+        image: myapplicationjarr
         name:  myappjar        
         state: started
         auto_remove: true
