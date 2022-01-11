@@ -28,7 +28,7 @@
      
     - name: deploy tomcat  docker container
       docker_container:
-        image: myapjarr        
+        image: myapjarrr        
         state: started
         auto_remove: true
         ports:
