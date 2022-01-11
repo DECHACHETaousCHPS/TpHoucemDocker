@@ -8,7 +8,7 @@ node {
 
   stage('Build image') {
 
-        sh 'sudo docker build -t myapplicationjar  . '
+        sh 'sudo docker build -t myapplicationjarr  . '
         sh 'sudo docker tag myapplicationjarr taousdechache/myapplicationjarr:latest '
 
   }
