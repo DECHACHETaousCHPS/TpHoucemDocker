@@ -8,12 +8,12 @@ node {
 
   stage('Build image') {
 
-        sh 'sudo docker build -t tomcat:jarr . '
+        sh 'sudo docker build -t tomcat:JAR . '
 
   }
   stage('Run Image') {
 
-      sh 'sudo docker run -d --name jarcontr -p 8989:8080 tomcat:jarr'
+      sh 'sudo docker run -d --name jarcontainr -p 8989:8686 tomcat:JAR'
   }
   stage('Ansible') {
 
