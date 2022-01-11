@@ -8,12 +8,12 @@ node {
 
   stage('Build image') {
 
-        sh 'sudo docker build -t monapplijar . '
+        sh 'sudo docker build -t myaplijar . '
 
   }
   stage('Run Image') {
 
-      sh 'sudo docker run -d --name monappjarcotr  monapplijar'
+      sh 'sudo docker run -d --name myapplictr  myaplijar'
   }
   stage('Ansible') {
 
